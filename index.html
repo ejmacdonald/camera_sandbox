@@ -44,8 +44,8 @@ input.onchange = function () {
 
 
 function displayAsImage(file) {
-  var imgURL = URL.createObjectURL(file),
-      img = document.createElement('img');
+  var imgURL = URL.createObjectURL(file);
+  var img = document.createElement('img');
 
   img.onload = function() {
     URL.revokeObjectURL(imgURL);
@@ -53,14 +53,9 @@ function displayAsImage(file) {
 
   img.src = imgURL;
 
-  // var imageElement = $("<img>");
-  // imageElement.attr("src", img);
-  // img.attr("width", "300");
-
   console.log("appending images");
   $(".images").append(img);
 
-  // document.body.appendChild(img);
 }
 
 </script>
