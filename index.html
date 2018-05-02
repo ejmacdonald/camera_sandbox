@@ -60,9 +60,13 @@
 <script>
 
 var input = document.querySelector('input[type=file]');
+	
+comsole.log("input: " + input);
 
 input.onchange = function () {
   var file = input.files[0];
+
+console.log("file: "+ file);
 
   displayAsImage(file);
 };
